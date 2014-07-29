@@ -1,8 +1,19 @@
 {
-  "name": "foundation-compass-app",
+  "name": "todowiwi",
   "version": "0.0.1",
-  "private": "true",
+  "private": true,
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
-  }
+    "foundation": "zurb/bower-foundation",
+    "angular": "~1.2.21"
+  },
+  "homepage": "https://github.com/wiwi-dev/todowiwi",
+  "description": "Another TODOs app.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

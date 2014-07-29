@@ -1,29 +1,33 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html ng-app class="no-js" lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=2.0" />
   <title>Dashboard</title>
   <link rel="stylesheet" href="stylesheets/app.css" />
   <script src="bower_components/modernizr/modernizr.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
 </head>
 <body>
   <div class="contain-to-grid sticky">
     <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="toggle-topbar menu-icon">
+          <a href="#">
+            <span> </span>
+          </a>
+        </li>
+        <li class="divider"></li>
+        <li class="name">
+          <h1><a href="#">todo.wiwi</a></h1>
+        </li>
+      </ul>
       <section class="top-bar-section">
-        <ul class="title-area">
-          <li class="name">
-            <h1><a href="#">todo.wiwi</a><h1/>
-          </li>
-          <li class="toggle-topbar menu-icon">
-            <a href="#"><span> </span></a>
-          </li>
-        </ul>
         <ul class="left">
           <li>
-            <a href="#" data-dropdown="contentDrop">#</a>
+            <a href="#" class="button" data-dropdown="contentDrop">!!</a>
           </li>
-          <div id="contentDrop" class="f-dropdown content medium open" data-dropdown-content="" style=">position: absolute; left: 181.233px; top: 3083.75px;">
+          <div id="contentDrop" class="f-dropdown content large" data-dropdown-content="" style=">position: absolute; left: 181.233px; top: 3083.75px;">
             <h6>Some Notification</h6>
             <p>
             <span>This is just a test.</span>
@@ -36,7 +40,12 @@
           </div>
         </ul>
         <ul class="right">
-          <li class="active"><a href="#" class="button">+</a></li>
+          <li class="has-form">
+            <div class="row collapse">
+              <div class="large-9 small-10 columns"><input type="text" ng-model="todoName" placeholder="New TODO"></div>
+              <div class="large-3 small-2 columns"><a href="#" class="button expand">+</a></div>
+            </div>
+          </li>
           <li><a href="#">juan dc</a></li>
           <li class="divider"></li>
           <li class><a href="#">logout</a></li>
@@ -46,10 +55,14 @@
     </nav>
   </div>
   <div class="row">
-    <h1>TO DOs</h1>
+    <h1>TODOs</h1>
   </div>
   <div class="row">
     <div class="large-12 columns">
+      <div data-alert class="alert-box secondary large-3 columns">
+        <h4 class="name-holder">{{todoName}}</h4>
+        <a href="#" class="close">&times;</a>
+      </div>
       <div data-alert class="alert-box secondary large-3 columns">
         <h4>JavaScript</h4>
         <input type="checkbox" /><label>Clean</label><br>
