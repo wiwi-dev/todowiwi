@@ -1,0 +1,9 @@
+{
+  "name": "todowiwi",
+  "version": "0.0.1",
+  "description": "api for TODOs",
+  "dependencies": {
+    "express": "~4.7.2",
+    "socket.io": "~1.0.6"
+  }
+}
